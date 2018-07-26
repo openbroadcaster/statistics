@@ -17,10 +17,10 @@ class DataAndStatistics extends OBFController
     $return['media_genres'] = $this->model('media_genres');
     $return['media_countries'] = $this->model('media_countries');
     $return['media_languages'] = $this->model('media_languages');
+    $return['media_types'] = $this->model('media_types');
     $return['media_audio_formats'] = $this->model('media_audio_formats');
     $return['media_video_formats'] = $this->model('media_video_formats');
     $return['media_image_formats'] = $this->model('media_image_formats');
-    $return['media_types'] = $this->model('media_types');
     $return['media_status'] = $this->model('media_status');
     $return['media_approved'] = $this->model('media_approved');
     $return['media_owner'] = $this->model('media_owner');

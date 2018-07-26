@@ -110,9 +110,9 @@ OBModules.DataAndStatistics = new function()
     {
       var $row = $('<tr></tr>');
       $.each(row, function(name, value)
-      {
+      {      
         if(what=='media_image_formats' && name=='duration') return true;
-        if(name=='duration') value=secsToTime(value,'hms')+' ('+Math.round(parseInt(value)*10000/total_duration,2)/100+'%)';
+        if(name=='duration' && total_duration>0 && value>0) value=secsToTime(value,'hms')+' ('+Math.round(parseInt(value)*10000/total_duration,2)/100+'%)';
         if(name=='count') value+=' ('+Math.round(parseInt(value)*10000/total_count,2)/100+'%)';
         $row.append( $('<td></td>').text(value) );
       });

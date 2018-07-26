@@ -4,9 +4,8 @@ class DataAndStatisticsModel extends OBFModel
 {
   public function media_types()
   {
-    $this->db->query('SELECT type as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY type ORDER BY count DESC');
-    $rows = $this->db->assoc_list();    
-    return [];
+    $this->db->query('SELECT type as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY type ORDER BY count DESC, duration DESC');
+    $rows = $this->db->assoc_list();
     return $rows;
   }
   
@@ -15,7 +14,7 @@ class DataAndStatisticsModel extends OBFModel
     $this->db->query('SELECT media_categories.name as name,count(*) as count,sum(duration) as duration
         FROM media 
         LEFT JOIN media_categories ON media.category_id=media_categories.id 
-        GROUP BY media.category_id ORDER BY count DESC');
+        GROUP BY media.category_id ORDER BY count DESC, duration DESC');
         
     $rows = $this->db->assoc_list();
     
@@ -42,7 +41,7 @@ class DataAndStatisticsModel extends OBFModel
         FROM media 
         LEFT JOIN media_genres ON media.genre_id=media_genres.id 
         LEFT JOIN media_categories ON media_genres.media_category_id=media_categories.id
-        GROUP BY media.genre_id ORDER BY count DESC');
+        GROUP BY media.genre_id ORDER BY count DESC, duration DESC');
         
     $rows = $this->db->assoc_list();
     
@@ -73,7 +72,7 @@ class DataAndStatisticsModel extends OBFModel
     $this->db->query('SELECT media_countries.name as name,count(*) as count,sum(duration) as duration 
         FROM media 
         LEFT JOIN media_countries ON media.country_id=media_countries.id 
-        GROUP BY media.country_id ORDER BY count DESC');
+        GROUP BY media.country_id ORDER BY count DESC, duration DESC');
         
     $rows = $this->db->assoc_list();
     
@@ -99,7 +98,7 @@ class DataAndStatisticsModel extends OBFModel
     $this->db->query('SELECT media_languages.name as name,count(*) as count,sum(duration) as duration
         FROM media 
         LEFT JOIN media_languages ON media.language_id=media_languages.id 
-        GROUP BY media.language_id ORDER BY count DESC');
+        GROUP BY media.language_id ORDER BY count DESC, duration DESC');
         
     $rows = $this->db->assoc_list();
     
@@ -122,42 +121,42 @@ class DataAndStatisticsModel extends OBFModel
   
   public function media_audio_formats()
   {
-    $this->db->query('SELECT format as name,count(*) AS count,sum(duration) as duration FROM media WHERE type="audio" and format!="" GROUP BY format ORDER BY count DESC');
+    $this->db->query('SELECT format as name,count(*) AS count,sum(duration) as duration FROM media WHERE type="audio" and format!="" GROUP BY format ORDER BY count DESC, duration DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
   
   public function media_video_formats()
   {
-    $this->db->query('SELECT format as name,count(*) AS count,sum(duration) as duration FROM media WHERE type="video" and format!="" GROUP BY format ORDER BY count DESC');
+    $this->db->query('SELECT format as name,count(*) AS count,sum(duration) as duration FROM media WHERE type="video" and format!="" GROUP BY format ORDER BY count DESC, duration DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
   
   public function media_image_formats()
   {
-    $this->db->query('SELECT format as name,count(*) AS count,sum(duration) as duration FROM media WHERE type="image" and format!="" GROUP BY format ORDER BY count DESC');
+    $this->db->query('SELECT format as name,count(*) AS count FROM media WHERE type="image" and format!="" GROUP BY format ORDER BY count DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
   
   public function media_status()
   {
-    $this->db->query('SELECT status as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY status ORDER BY count DESC');
+    $this->db->query('SELECT status as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY status ORDER BY count DESC, duration DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
   
   public function media_approved()
   {
-    $this->db->query('SELECT (CASE WHEN is_approved <> 0 THEN "approved" ELSE "not approved" END) as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY is_approved ORDER BY count DESC');
+    $this->db->query('SELECT (CASE WHEN is_approved <> 0 THEN "approved" ELSE "not approved" END) as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY is_approved ORDER BY count DESC, duration DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
   
   public function media_owner()
   {
-    $this->db->query('SELECT (CASE WHEN is_copyright_owner <> 0 THEN "copyright owner" ELSE "not copyright owner" END) as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY is_copyright_owner ORDER BY count DESC');
+    $this->db->query('SELECT (CASE WHEN is_copyright_owner <> 0 THEN "copyright owner" ELSE "not copyright owner" END) as name,count(*) AS count,sum(duration) as duration FROM media GROUP BY is_copyright_owner ORDER BY count DESC, duration DESC');
     $rows = $this->db->assoc_list();
     return $rows;
   }
