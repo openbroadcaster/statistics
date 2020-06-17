@@ -6,7 +6,7 @@ title: index
 * TOC
 {:toc}
 
-<a name="dashboard"></a>
+![ Statistics](img/statistics.png ){: .Statistics}
 
 ## Statistics Module
 
@@ -19,5 +19,4 @@ Charts and Graphs of Media Info and Usage
 
 Displays media
 
-![ Statistics](img/statistics.png ){: .Statistics}
 
