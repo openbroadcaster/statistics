@@ -10,7 +10,7 @@ title: index
 
 ![ Statistics](img/statistics.png ){: .Statistics}
 
-Graphically View MetaData, Statistics Meta and Usage
+Graphically View MetaData, Statistics and Usage
 
 __Media Metadata__
 - Categories
