@@ -6,17 +6,36 @@ title: index
 * TOC
 {:toc}
 
+## Statistics 
+
 ![ Statistics](img/statistics.png ){: .Statistics}
 
-## Statistics Module
+Graphically View MetaData, Statistics Meta and Usage
 
-Using the Statistics module
-{:toc}
+__Media Metadata__
+- Categories
+- Countries
+- Language
+- Genre
 
-Data & Statistics
+__Media Status__
+- Visibility
+- Is Approved?
+- Copyright Holder?
 
-Charts and Graphs of Media Info and Usage
+__Media Formats__
+- By Type
+- Video Formats
+- Audio Formats
 
-Displays media
+__Playlist Status__
+- Type
+- Visibility
+
+__Advanced reports__
+- Count
+- Duration
+- Total duration
+
 
 
