@@ -4,7 +4,7 @@ class DataAndStatisticsModule extends OBFModule
 {
 
 	public $name = 'Data & Statistics v1.0';
-	public $description = 'Provide stats for media, playlists, and other OpenBroadcaster Server data.';
+	public $description = 'Provide graphs and statistics for media, playlists and other OBServer data.';
 
 	public function callbacks()
 	{
