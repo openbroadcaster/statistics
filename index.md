@@ -13,30 +13,30 @@ title: index
 
 Graphically View MetaData, Statistics and Usage
 
-__Media Metadata__
-- Categories
-- Countries
-- Language
-- Genre
+## Media Metadata
+* Categories
+* Countries
+* Language
+* Genre
 
-__Media Status__
-- Visibility
-- Is Approved?
-- Copyright Holder?
+## Media Status
+* Visibility
+* Is Approved?
+* Copyright Holder?
 
-__Media Formats__
-- By Type
-- Video Formats
-- Audio Formats
+## Media Formats
+* By Type
+* Video Formats
+* Audio Formats
 
-__Playlist Status__
-- Type
-- Visibility
+## Playlist Status
+* Type
+* Visibility
 
-__Advanced reports__
-- Count
-- Duration
-- Total duration
+## Advanced Reports
+* Count
+* Duration
+* Total duration
 
 
 
