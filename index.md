@@ -3,10 +3,11 @@ layout: default
 title: index
 ---
 
+# Statistics 
+{:.no_toc}
+
 * TOC
 {:toc}
-
-## Statistics 
 
 ![ Statistics](img/statistics.png ){: .Statistics}
 
