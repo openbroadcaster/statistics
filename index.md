@@ -2,6 +2,8 @@
 layout: default
 title: index
 ---
+<br/>
+![statistics](https://user-images.githubusercontent.com/4603894/210111285-e76b5925-0501-44e4-9aaf-ff0894f7fb3c.png)
 
 # Statistics 
 {:.no_toc}
