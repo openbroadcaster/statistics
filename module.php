@@ -1,6 +1,6 @@
 <?php
 
-class StatisticsModule extends OBFModule
+class DataAndStatisticsModule extends OBFModule
 {
 
 	public $name = 'Data & Statistics v1.0';
