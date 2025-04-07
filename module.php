@@ -13,27 +13,22 @@ class DataAndStatisticsModule extends OBFModule
 
 	public function install()
 	{
-        // add permissions data for this module
-        $this->db->insert('users_permissions', [
-            'category'=>'administration',
-            'description'=>'data & statistics module',
-            'name'=>'data_statistics_module'
-        ]);
+        $this->permission_enable('administration', 'data_statistics_module', 'data & statistics module');
 
         return true;
 	}
 
 	public function uninstall()
 	{
-        // remove permissions data for this module
-        $this->db->where('name','data_statistics_module');
-        $this->db->delete('users_permissions');
+        $this->permission_disable('data_statistics_module');
 
         return true;
 	}
 
     public function purge()
     {
+        $this->permission_delete('data_statistics_module');
+
         return true;
     }
 }
