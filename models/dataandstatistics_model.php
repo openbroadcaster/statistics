@@ -1,6 +1,8 @@
 <?php
 
-class DataAndStatisticsModel extends OBFModel
+use OpenBroadcaster\Base\Model;
+
+class DataAndStatisticsModel extends Model
 {
   public function media_types()
   {

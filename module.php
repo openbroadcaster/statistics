@@ -1,6 +1,8 @@
 <?php
 
-class DataAndStatisticsModule extends OBFModule
+use OpenBroadcaster\Base\Module;
+
+class DataAndStatisticsModule extends Module
 {
 
 	public $name = 'Data & Statistics v1.0';

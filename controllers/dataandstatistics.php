@@ -1,6 +1,8 @@
 <?php
 
-class DataAndStatistics extends OBFController
+use OpenBroadcaster\Base\Controller;
+
+class DataAndStatistics extends Controller
 {
 
   public function __construct()
@@ -9,7 +11,7 @@ class DataAndStatistics extends OBFController
     $this->user->require_permission('data_statistics_module');
     $this->model = $this->load->model('DataAndStatistics');
   }
-  
+
   public function get_all()
   {
     $return = [];
@@ -26,7 +28,7 @@ class DataAndStatistics extends OBFController
     $return['media_owner'] = $this->model('media_owner');
     $return['playlist_type'] = $this->model('playlist_type');
     $return['playlist_status'] = $this->model('playlist_status');
-    
+
     return array(true,'Data and Statistics',$return);
   }
 
